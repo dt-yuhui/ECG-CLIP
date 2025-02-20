@@ -1,0 +1,9 @@
+h5py==3.13.0
+lifelines==0.30.0
+matplotlib==3.10.0
+numpy==2.2.3
+pandas==2.2.3
+scikit_learn==1.6.1
+scipy==1.15.2
+torch==2.6.0+cu118
+tqdm==4.67.1
