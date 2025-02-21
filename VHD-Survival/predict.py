@@ -113,7 +113,7 @@ def main():
     df_out = eval_batch(model, 'dataset/VHD/tset_VHD.csv', 'fu_label', 'checkpoints/', h5_path, h5_csv_path)
 
     plot_roc(df_out, 'fu_lvef_label', 'results/ROC.png')
-    plot_cindex(df_out, 'fu_lvef_label', 'results/ROC.png')
+    plot_cindex(df_out, 'fu_lvef_label', 'results/c-index.png')
 
 
 if __name__ == "__main__":
