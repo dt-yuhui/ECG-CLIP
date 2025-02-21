@@ -76,6 +76,7 @@ class ResNet(nn.Module):
         self.linear = nn.Linear(512 * block.expansion, num_classes)
 
         self.avgpool = nn.AdaptiveAvgPool1d((1))
+        self.sigmoid = nn.Sigmoid()
 
     def _make_layer(self, block, out_channels, num_blocks, stride):
         strides = [stride] + [1] * (num_blocks - 1)
@@ -94,6 +95,8 @@ class ResNet(nn.Module):
         out = self.avgpool(out)
         out = out.view(out.size(0), -1)
         out = self.linear(out)
+        out = self.sigmoid(out)
+        
         return out
 
 
