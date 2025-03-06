@@ -1,6 +1,6 @@
 # VHD-survival
 
-This repository contains scripts for data processing and building deep survival models to predict the survival of patients with VHD (Valvular Heart Disease). The project includes preprocessing of ECG data, training a deep survival model, and making predictions.
+This repository contains scripts for data processing and building deep progession models to predict the progression of patients with VHD (Valvular Heart Disease). The project includes preprocessing of ECG data, training a deep progression model, and making predictions.
 
 ## Model - Introduction of Our Code
 
@@ -46,7 +46,7 @@ The data preprocessing steps are as follows:
     - **Zero padding**: Pads the signal to the required dimensions.
 
 2. **Preprocessing the Labels**:
-    Before training, the labels (survival data) must be included in a CSV file, which should contain a column `fu_days` indicating the follow-up days for each patient. This file will be used for training the model.
+    Before training, the labels (progression data) must be included in a CSV file, which should contain a column `fu_days` indicating the follow-up days for each patient. This file will be used for training the model.
 
     ```python
     main(model=model,
@@ -57,7 +57,7 @@ The data preprocessing steps are as follows:
 
 ### Training the Model
 
-To train the deep survival model, use the following command after setting up your environment and preprocessing the data:
+To train the deep progression model, use the following command after setting up your environment and preprocessing the data:
 
 ```bash
   python train_survival.py
@@ -71,7 +71,7 @@ Once the model has been trained, you can use it to make predictions using the fo
 ```bash
   python predict.py
 ```
-This will allow you to test the model's performance and predict survival for new input data.
+This will allow you to test the model's performance and predict progression for new input data.
 
 ### Dependencies
 Install the required dependencies using:
